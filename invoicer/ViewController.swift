@@ -8,18 +8,92 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
+  var clientRepository = ClientRepository()
+  var itemRepository = ItemRepository()
+  
+  @IBOutlet var date: UITextField!
+  @IBOutlet var client: UITextField!
+  @IBOutlet var item: UITextField!
+  @IBOutlet var clientPicker: UIPickerView!
+  @IBOutlet var itemPicker: UIPickerView!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    setDefaultDate()
+    setClientPicker()
+    setItemPicker()
+  }
+  
+  func setDefaultDate() {
+    let dateObject = NSDate()
+    var dateFormatter = NSDateFormatter()
+    dateFormatter.dateFormat = "dd-MM-yyyy"
+    date.text = dateFormatter.stringFromDate(dateObject)
+  }
+  
+  func setClientPicker() {
+    clientPicker = UIPickerView()
+    clientPicker.dataSource = self
+    clientPicker.delegate = self
+    client.inputView = clientPicker
+  }
+  
+  func setItemPicker() {
+    itemPicker = UIPickerView()
+    itemPicker.dataSource = self
+    itemPicker.delegate = self
+    item.inputView = itemPicker
   }
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-
-
+  
+  override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    self.view.endEditing(true)
+  }
+  
+  /*
+  ** UIPickerViewDataSource
+  */
+  
+  // Returns the number of 'columns' to display.
+  func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    return 1
+  }
+  
+  // Returns the # of rows in each component..
+  func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    if pickerView.isEqual(clientPicker) {
+      return clientRepository.clients.count
+    }
+    else {
+      return itemRepository.items.count
+    }
+  }
+  
+  /*
+  ** UIPickerViewDelegate
+  */
+  
+  func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+    if pickerView.isEqual(clientPicker) {
+      return clientRepository.clients[row].name
+    }
+    else {
+      return itemRepository.items[row].name
+    }
+  }
+  
+  func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    if pickerView.isEqual(clientPicker) {
+      client.text = clientRepository.clients[row].name
+    }
+    else {
+      item.text = itemRepository.items[row].name
+    }
+  }
 }
-

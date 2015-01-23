@@ -13,6 +13,10 @@
 		51AAEC881A72804A00356AA6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51AAEC871A72804A00356AA6 /* Images.xcassets */; };
 		51AAEC8B1A72804A00356AA6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51AAEC891A72804A00356AA6 /* LaunchScreen.xib */; };
 		51AAEC971A72804A00356AA6 /* invoicerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAEC961A72804A00356AA6 /* invoicerTests.swift */; };
+		51AAECA31A72971A00356AA6 /* ClientRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAECA21A72971A00356AA6 /* ClientRepository.swift */; };
+		51AAECA51A72992100356AA6 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAECA41A72992100356AA6 /* Client.swift */; };
+		51AAECA71A729D7B00356AA6 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAECA61A729D7B00356AA6 /* Item.swift */; };
+		51AAECA91A729E5200356AA6 /* ItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAECA81A729E5200356AA6 /* ItemRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		51AAEC901A72804A00356AA6 /* invoicerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = invoicerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		51AAEC951A72804A00356AA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51AAEC961A72804A00356AA6 /* invoicerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = invoicerTests.swift; sourceTree = "<group>"; };
+		51AAECA21A72971A00356AA6 /* ClientRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientRepository.swift; sourceTree = "<group>"; };
+		51AAECA41A72992100356AA6 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		51AAECA61A729D7B00356AA6 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		51AAECA81A729E5200356AA6 /* ItemRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,10 @@
 				51AAEC871A72804A00356AA6 /* Images.xcassets */,
 				51AAEC891A72804A00356AA6 /* LaunchScreen.xib */,
 				51AAEC7E1A72804A00356AA6 /* Supporting Files */,
+				51AAECA21A72971A00356AA6 /* ClientRepository.swift */,
+				51AAECA41A72992100356AA6 /* Client.swift */,
+				51AAECA61A729D7B00356AA6 /* Item.swift */,
+				51AAECA81A729E5200356AA6 /* ItemRepository.swift */,
 			);
 			path = invoicer;
 			sourceTree = "<group>";
@@ -212,7 +224,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51AAECA91A729E5200356AA6 /* ItemRepository.swift in Sources */,
+				51AAECA71A729D7B00356AA6 /* Item.swift in Sources */,
+				51AAECA31A72971A00356AA6 /* ClientRepository.swift in Sources */,
 				51AAEC831A72804A00356AA6 /* ViewController.swift in Sources */,
+				51AAECA51A72992100356AA6 /* Client.swift in Sources */,
 				51AAEC811A72804A00356AA6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
