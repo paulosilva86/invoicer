@@ -8,7 +8,7 @@
 
 # Usage
 * Select the date, the client and the item.
-* Tap 'Create Invoice'
+* Tap 'Create Invoice'.
 
 # Contributors
 * @paulosilva86
