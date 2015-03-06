@@ -3,7 +3,7 @@
 * API Documentation (http://invoicexpress.com/api/overview)
 
 # Features
-* Create a draft invoice on InvoiceXpress.
+* Creates a draft invoice on InvoiceXpress.
 * That's pretty much it!
 
 # Usage
