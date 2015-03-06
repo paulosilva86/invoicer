@@ -10,7 +10,7 @@ import Foundation
 
 class CreateInvoice {
   
-  func run(date:String, client:String, item:String, unitPrice:String) -> Bool {
+  func run(date:String, client:String, item:String, unitPrice:Double) -> Bool {
     let xml = buildXml(date, client: client, item: item, unitPrice: unitPrice)
     let request = setupRequest(xml)
 
@@ -22,7 +22,7 @@ class CreateInvoice {
     return true
   }
   
-  func buildXml(date:String, client:String, item:String, unitPrice:String) -> String {
+  func buildXml(date:String, client:String, item:String, unitPrice:Double) -> String {
     var xmlBody = "<invoice>"
     xmlBody    += "<date>\(date)</date>"
     xmlBody    += "<due_date>\(date)</due_date>"

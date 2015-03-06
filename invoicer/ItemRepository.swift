@@ -21,4 +21,14 @@ class ItemRepository {
   func getItems() -> Array<Item> {
     return items
   }
+  
+  func getItemPrice(name:String) -> Double {
+    for item in items {
+      if (item.name == name) {
+        return item.unitPrice
+      }
+    }
+    
+    return 0.0
+  }
 }

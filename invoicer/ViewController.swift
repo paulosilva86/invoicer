@@ -30,9 +30,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     var _date = date.text
     var _client = client.text
     var _item = item.text
-    var _unitPrice = itemTotalLabel.text
+    var _unitPrice = itemRepository.getItemPrice(item.text!)
     
-    var result = interactor.run(_date, client: _client, item: _item, unitPrice: _unitPrice!)
+    var result = interactor.run(_date, client: _client, item: _item, unitPrice: _unitPrice)
     
     if (result) {
       println("Invoice created successfully")
