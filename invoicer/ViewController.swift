@@ -12,6 +12,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 
   var clientRepository = ClientRepository()
   var itemRepository = ItemRepository()
+  var interactor = CreateInvoice()
   
   @IBOutlet var date: UITextField!
   @IBOutlet var client: UITextField!
@@ -22,6 +23,23 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
   @IBOutlet weak var itemSumLabel: UILabel!
   @IBOutlet weak var itemVatLabel: UILabel!
   @IBOutlet weak var itemTotalLabel: UILabel!
+  
+  @IBOutlet weak var createInvoiceButton: UIButton!
+  
+  @IBAction func createInvoice(sender: UIButton) {
+    var _date = date.text
+    var _client = client.text
+    var _item = item.text
+    var _unitPrice = itemTotalLabel.text
+    
+    var result = interactor.run(_date, client: _client, item: _item, unitPrice: _unitPrice!)
+    
+    if (result) {
+      println("Invoice created successfully")
+    } else {
+      println("Error creating invoice")
+    }
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()

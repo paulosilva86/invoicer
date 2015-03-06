@@ -44,6 +44,9 @@
                                 <state key="normal" title="Create Invoice">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="createInvoice:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TkJ-0y-V6X"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kfR-QO-svm">
                                 <rect key="frame" x="16" y="273" width="87" height="21"/>
@@ -99,6 +102,7 @@
                     </view>
                     <connections>
                         <outlet property="client" destination="sb3-Cb-Moq" id="wrN-Pd-HdK"/>
+                        <outlet property="createInvoiceButton" destination="VO6-sb-TLJ" id="x8K-Zu-YaD"/>
                         <outlet property="date" destination="Whs-K3-RAv" id="W6x-iE-DGQ"/>
                         <outlet property="item" destination="GoD-Ji-oUe" id="GCc-An-gjm"/>
                         <outlet property="itemSumLabel" destination="tFm-KW-9aQ" id="SWd-8E-TkJ"/>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		518CFB3B1AAA1C6F00F218B1 /* CreateInvoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518CFB3A1AAA1C6F00F218B1 /* CreateInvoice.swift */; };
 		51AAEC811A72804A00356AA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAEC801A72804A00356AA6 /* AppDelegate.swift */; };
 		51AAEC831A72804A00356AA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAEC821A72804A00356AA6 /* ViewController.swift */; };
 		51AAEC861A72804A00356AA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51AAEC841A72804A00356AA6 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		518CFB3A1AAA1C6F00F218B1 /* CreateInvoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateInvoice.swift; sourceTree = "<group>"; };
 		51AAEC7B1A72804A00356AA6 /* invoicer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = invoicer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51AAEC7F1A72804A00356AA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51AAEC801A72804A00356AA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				51AAECA41A72992100356AA6 /* Client.swift */,
 				51AAECA61A729D7B00356AA6 /* Item.swift */,
 				51AAECA81A729E5200356AA6 /* ItemRepository.swift */,
+				518CFB3A1AAA1C6F00F218B1 /* CreateInvoice.swift */,
 			);
 			path = invoicer;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				51AAEC831A72804A00356AA6 /* ViewController.swift in Sources */,
 				51AAECA51A72992100356AA6 /* Client.swift in Sources */,
 				51AAEC811A72804A00356AA6 /* AppDelegate.swift in Sources */,
+				518CFB3B1AAA1C6F00F218B1 /* CreateInvoice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +425,7 @@
 				51AAEC9C1A72804A00356AA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		51AAEC9D1A72804A00356AA6 /* Build configuration list for PBXNativeTarget "invoicerTests" */ = {
 			isa = XCConfigurationList;
@@ -429,6 +434,7 @@
 				51AAEC9F1A72804A00356AA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
