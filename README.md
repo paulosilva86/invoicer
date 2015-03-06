@@ -1,5 +1,5 @@
 # Invoicer
-* Invoicer is an iOS invoice generator. It uses InvoiceXpress's API to create invoices.
+* Invoicer is an iOS invoice generator written in Swift. It uses InvoiceXpress's API to create invoices.
 * API Documentation (http://invoicexpress.com/api/overview)
 
 # Features
