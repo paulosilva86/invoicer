@@ -60,14 +60,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€230" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Is6-ZQ-gTh">
-                                <rect key="frame" x="64" y="343" width="39" height="21"/>
+                                <rect key="frame" x="64" y="343" width="117" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€1000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tFm-KW-9aQ">
-                                <rect key="frame" x="64" y="314" width="48" height="21"/>
+                                <rect key="frame" x="64" y="314" width="117" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -81,7 +81,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€1230" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rr5-24-LEe">
-                                <rect key="frame" x="64" y="372" width="48" height="21"/>
+                                <rect key="frame" x="64" y="372" width="117" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -101,6 +101,9 @@
                         <outlet property="client" destination="sb3-Cb-Moq" id="wrN-Pd-HdK"/>
                         <outlet property="date" destination="Whs-K3-RAv" id="W6x-iE-DGQ"/>
                         <outlet property="item" destination="GoD-Ji-oUe" id="GCc-An-gjm"/>
+                        <outlet property="itemSumLabel" destination="tFm-KW-9aQ" id="SWd-8E-TkJ"/>
+                        <outlet property="itemTotalLabel" destination="Rr5-24-LEe" id="L99-bp-uch"/>
+                        <outlet property="itemVatLabel" destination="Is6-ZQ-gTh" id="aPM-3l-ugB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

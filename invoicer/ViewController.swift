@@ -19,6 +19,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
   @IBOutlet var clientPicker: UIPickerView!
   @IBOutlet var itemPicker: UIPickerView!
   
+  @IBOutlet weak var itemSumLabel: UILabel!
+  @IBOutlet weak var itemVatLabel: UILabel!
+  @IBOutlet weak var itemTotalLabel: UILabel!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     setDefaultDate()
@@ -88,12 +92,22 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
   }
   
+  func formatCurrencyValue(value:Double) -> String {
+    return String(format:"€%.2f", value)
+  }
+  
   func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
     if pickerView.isEqual(clientPicker) {
       client.text = clientRepository.clients[row].name
     }
     else {
-      item.text = itemRepository.items[row].name
+      var selectedItem = itemRepository.items[row]
+      
+      item.text = selectedItem.name
+      itemSumLabel.text = formatCurrencyValue( selectedItem.unitPrice)
+      itemVatLabel.text = formatCurrencyValue(selectedItem.rrp - selectedItem.unitPrice)
+      itemTotalLabel.text = formatCurrencyValue(selectedItem.rrp)
+      
     }
   }
 }
