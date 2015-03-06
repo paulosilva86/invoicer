@@ -11,4 +11,4 @@
 * Tap 'Create Invoice'.
 
 # Contributors
-* @paulosilva86
+* [@paulosilva86](https://github.com/paulosilva86)
