@@ -12,3 +12,6 @@
 
 # Contributors
 * [@paulosilva86](https://github.com/paulosilva86)
+
+# Screenshot
+<img src="https://github.com/paulosilva86/invoicer/blob/master/invoicer/Images.xcassets/screenshot.png" alt="invoicer" width="300px" height="500px">
