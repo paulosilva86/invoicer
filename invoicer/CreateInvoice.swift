@@ -11,11 +11,11 @@ import Foundation
 class CreateInvoice {
   
   func run(date:String, client:String, item:String, unitPrice:Double) -> Bool {
-    let xml = buildXml(date, client: client, item: item, unitPrice: unitPrice)
-    let request = setupRequest(xml)
+    let xml = buildXml(date: date, client: client, item: item, unitPrice: unitPrice)
+    let request = setupRequest(xml: xml)
 
-    let session = NSURLSession.sharedSession()
-    let dataTask = session.dataTaskWithRequest(request)
+    let session = URLSession.shared
+    let dataTask = session.dataTask(with: request)
     
     dataTask.resume()
 
@@ -41,14 +41,14 @@ class CreateInvoice {
     return xmlBody
   }
   
-  func setupRequest(xml:String) -> NSMutableURLRequest {
-    let url = NSURL(string: "http://swat.bizflow.com:3001/invoices.xml?api_key=7e22a3112b5e92552fe1b0f48b7a0fa290b94c7a")
+  func setupRequest(xml:String) -> URLRequest {
+    let url = URL(string: "http://swat.bizflow.com:3001/invoices.xml?api_key=7e22a3112b5e92552fe1b0f48b7a0fa290b94c7a")!
     
-    var bodyEncoded = xml.dataUsingEncoding(NSUTF8StringEncoding)
-    var request = NSMutableURLRequest(URL: url)
-    request.HTTPMethod = "POST"
+    let bodyEncoded = xml.data(using: String.Encoding.utf8)
+    var request = URLRequest(url: url)
+    request.httpMethod = "POST"
     request.addValue("application/xml; charset=utf-8", forHTTPHeaderField: "Content-Type")
-    request.HTTPBody = bodyEncoded
+    request.httpBody = bodyEncoded
     
     return request
   }
